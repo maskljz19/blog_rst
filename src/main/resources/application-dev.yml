@@ -1,0 +1,20 @@
+# 开发环境
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+logging:
+  level:
+    root: info
+    com.mask.blog.myblog: debug
+  file:
+    path: log/blog-dev.log # 默认10Mb/
+
+server:
+  port: 8080
