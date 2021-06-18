@@ -60,7 +60,7 @@
       <div class="ui  attached padded segment">
         <!--内容-->
         <div class="ui right aligned basic segment">
-          <div class="ui orange basic label" th:text="${blog.flag}">原创</div>
+          <div class="ui orange basic label" th:text="${blog.flag.isEmpty()?'原创':blog.flag}">原创</div>
         </div>
 
         <h2 class="ui center aligned header" th:text="${blog.title}">关于刻意练习的清单</h2>
@@ -443,11 +443,11 @@ h5,h6{font-size:1em;}
             <div class="ui orange basic label">
               <div class="ui images" style="font-size: inherit !important;">
                 <div class="image">
-                  <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
+                  <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" alt="" class="ui rounded bordered image" style="width: 120px">
                   <div>支付宝</div>
                 </div>
                 <div class="image">
-                  <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
+                  <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" alt="" class="ui rounded bordered image" style="width: 120px">
                   <div>微信</div>
                 </div>
               </div>
@@ -463,12 +463,12 @@ h5,h6{font-size:1em;}
             <ui class="list">
               <li>作者：<span th:text="${blog.user.nickname}">mask</span><a href="#" th:href="@{/about}" target="_blank">（联系作者）</a></li>
               <li>发表时间：<span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2021-01-02 09:08</span></li>
-              <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
-              <li>公众号转载：请在文末添加作者公众号二维码</li>
+              <li>版权声明：自由转载-非商用-非衍生-保持署名</li>
+              <li>公众号转载：请在文末添加作者二维码</li>
             </ui>
           </div>
           <div class="five wide column">
-            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui right floated rounded bordered image" style="width: 110px">
+            <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" alt="" class="ui right floated rounded bordered image" style="width: 110px">
           </div>
         </div>
       </div>
@@ -613,7 +613,7 @@ h5,h6{font-size:1em;}
     <div class="ui vertical icon buttons ">
       <button type="button" class="ui toc teal button" >目录</button>
       <a href="#comment-container" class="ui teal button" >留言</a>
-      <button class="ui wechat icon button"><i class="weixin icon"></i></button>
+      <button class="ui icon wechat button"><i class="weixin icon"></i></button>
       <div id="toTop-button" class="ui icon button" ><i class="chevron up icon"></i></div>
     </div>
   </div>
@@ -625,7 +625,7 @@ h5,h6{font-size:1em;}
   </div>
 
   <div id="qrcode" class="ui wechat-qr flowing popup transition hidden "style="width: 130px !important;">
-    <!--<img src="./static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
+<!--    <img th:src="@{/images/wechat.png}" alt="" class="ui rounded image" style="width: 120px !important;">-->
   </div>
 
 
@@ -679,7 +679,7 @@ h5,h6{font-size:1em;}
       position: 'left center'
     });
 
-    var serurl = /*[[#{blog.serurl}]]*/"127.0.0.1:8080";
+    var serurl = /*[[#{blog.serurl}]]*/"127.0.0.1:8081";
     var url = /*[[@{/blog/{id}(id=${blog.id})}]]*/"";
     var qrcode = new QRCode("qrcode", {
       text: serurl+url,

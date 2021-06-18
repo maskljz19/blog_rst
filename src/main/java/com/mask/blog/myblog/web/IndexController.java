@@ -54,7 +54,6 @@ public class IndexController {
         return "blog";
     }
 
-    @CrossOrigin
     @GetMapping("/covid19")
     public String blog() {
         return "covid19";
@@ -65,5 +64,4 @@ public class IndexController {
         model.addAttribute("newblogs", blogService.listRecommendBlogTop(3));
         return "_fragments :: newblogList";
     }
-
 }
