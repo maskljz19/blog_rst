@@ -17676,3 +17676,83 @@ java.util.NoSuchElementException: No value present
 	at java.lang.Thread.run(Thread.java:748)
 
 2021-06-18 18:01:13.450  WARN 18292 --- [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.NoSuchElementException: No value present]
+2021-06-18 19:09:33.041  INFO 21140 --- [restartedMain] com.mask.blog.myblog.MyblogApplication   : Starting MyblogApplication using Java 1.8.0_241 on DESKTOP-NLKIJN9 with PID 21140 (C:\Users\11146\Desktop\服务外包\myblog_rst\target\classes started by 11146 in C:\Users\11146\Desktop\服务外包\myblog_rst)
+2021-06-18 19:09:33.044 DEBUG 21140 --- [restartedMain] com.mask.blog.myblog.MyblogApplication   : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-06-18 19:09:33.044  INFO 21140 --- [restartedMain] com.mask.blog.myblog.MyblogApplication   : The following profiles are active: pro
+2021-06-18 19:09:38.623  WARN 21140 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-18 19:09:39.489  INFO 21140 --- [restartedMain] com.mask.blog.myblog.MyblogApplication   : Started MyblogApplication in 7.035 seconds (JVM running for 8.315)
+2021-06-18 19:10:04.974  WARN 21140 --- [http-nio-8081-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-06-18 19:10:04.986  WARN 21140 --- [http-nio-8081-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-06-18 19:10:22.757 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.m.dao.CovidMapper.getNationalData  : ==>  Preparing: select `datetime`, `currentConfirmedCount`, `confirmedCount`, `suspectedCount`, `curedCount`, `deadCount` from covid19_1 where datetime = ?
+2021-06-18 19:10:22.763 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.m.dao.CovidMapper.getNationalData  : ==> Parameters: 2021-06-18(String)
+2021-06-18 19:10:22.775 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.m.dao.CovidMapper.getNationalData  : <==      Total: 1
+2021-06-18 19:10:22.866 DEBUG 21140 --- [http-nio-8081-exec-8] c.m.b.m.d.CovidMapper.getCovidTimeData   : ==>  Preparing: select dateId,confirmedIncr as `新增确诊`,confirmedCount as `累计确诊`,suspectedCount as `疑似病例`,curedCount as `累计治愈`,deadCount as `累计死亡` from covid19_3
+2021-06-18 19:10:22.866 DEBUG 21140 --- [http-nio-8081-exec-8] c.m.b.m.d.CovidMapper.getCovidTimeData   : ==> Parameters: 
+2021-06-18 19:10:22.880 DEBUG 21140 --- [http-nio-8081-exec-8] c.m.b.m.d.CovidMapper.getCovidTimeData   : <==      Total: 500
+2021-06-18 19:10:22.893 DEBUG 21140 --- [http-nio-8081-exec-2] c.m.b.m.d.C.getCovidImportData           : ==>  Preparing: select provinceShortName as `name`,confirmedCount as `value` from covid19_4 where datetime = ? order by `value` desc limit 10
+2021-06-18 19:10:22.893 DEBUG 21140 --- [http-nio-8081-exec-2] c.m.b.m.d.C.getCovidImportData           : ==> Parameters: 2021-06-18(String)
+2021-06-18 19:10:22.895 DEBUG 21140 --- [http-nio-8081-exec-2] c.m.b.m.d.C.getCovidImportData           : <==      Total: 10
+2021-06-18 19:10:23.844 DEBUG 21140 --- [http-nio-8081-exec-3] c.m.b.m.d.C.getNationalMapData           : ==>  Preparing: select provinceShortName as name ,confirmedCount as value from covid19_2 where datetime = ?
+2021-06-18 19:10:23.845 DEBUG 21140 --- [http-nio-8081-exec-3] c.m.b.m.d.C.getNationalMapData           : ==> Parameters: 2021-06-18(String)
+2021-06-18 19:10:23.847 DEBUG 21140 --- [http-nio-8081-exec-3] c.m.b.m.d.C.getNationalMapData           : <==      Total: 34
+2021-06-18 19:10:24.911 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:24.912 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:24.913 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:26.912 DEBUG 21140 --- [http-nio-8081-exec-4] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:26.913 DEBUG 21140 --- [http-nio-8081-exec-4] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:26.914 DEBUG 21140 --- [http-nio-8081-exec-4] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:28.911 DEBUG 21140 --- [http-nio-8081-exec-9] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:28.912 DEBUG 21140 --- [http-nio-8081-exec-9] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:28.913 DEBUG 21140 --- [http-nio-8081-exec-9] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:31.211 DEBUG 21140 --- [http-nio-8081-exec-7] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:31.212 DEBUG 21140 --- [http-nio-8081-exec-7] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:31.213 DEBUG 21140 --- [http-nio-8081-exec-7] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:33.196 DEBUG 21140 --- [http-nio-8081-exec-8] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:33.197 DEBUG 21140 --- [http-nio-8081-exec-8] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:33.198 DEBUG 21140 --- [http-nio-8081-exec-8] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:35.201 DEBUG 21140 --- [http-nio-8081-exec-3] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:35.201 DEBUG 21140 --- [http-nio-8081-exec-3] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:35.202 DEBUG 21140 --- [http-nio-8081-exec-3] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:37.207 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:37.207 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:37.208 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:39.212 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:39.212 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:39.213 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:41.210 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:41.211 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:41.212 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:43.205 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:43.205 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:43.206 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:45.206 DEBUG 21140 --- [http-nio-8081-exec-3] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:45.207 DEBUG 21140 --- [http-nio-8081-exec-3] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:45.208 DEBUG 21140 --- [http-nio-8081-exec-3] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:47.209 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:47.210 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:47.212 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:49.200 DEBUG 21140 --- [http-nio-8081-exec-8] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:49.201 DEBUG 21140 --- [http-nio-8081-exec-8] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:49.202 DEBUG 21140 --- [http-nio-8081-exec-8] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:51.205 DEBUG 21140 --- [http-nio-8081-exec-5] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:51.206 DEBUG 21140 --- [http-nio-8081-exec-5] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:51.207 DEBUG 21140 --- [http-nio-8081-exec-5] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:53.210 DEBUG 21140 --- [http-nio-8081-exec-6] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:53.210 DEBUG 21140 --- [http-nio-8081-exec-6] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:53.211 DEBUG 21140 --- [http-nio-8081-exec-6] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:55.197 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:55.198 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:55.199 DEBUG 21140 --- [http-nio-8081-exec-1] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:57.199 DEBUG 21140 --- [http-nio-8081-exec-6] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:57.200 DEBUG 21140 --- [http-nio-8081-exec-6] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:57.201 DEBUG 21140 --- [http-nio-8081-exec-6] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:10:59.208 DEBUG 21140 --- [http-nio-8081-exec-4] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:10:59.208 DEBUG 21140 --- [http-nio-8081-exec-4] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:10:59.209 DEBUG 21140 --- [http-nio-8081-exec-4] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:11:00.911 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:11:00.912 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:11:00.912 DEBUG 21140 --- [http-nio-8081-exec-10] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 19:11:02.912 DEBUG 21140 --- [http-nio-8081-exec-9] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==>  Preparing: select name , `procurement` as `采购`, `allocation` as `下拨`, `donation` as `捐赠`, `consumption` as `消耗`, `requirement` as `需求`, `stock` as `库存` from covid19_wz
+2021-06-18 19:11:02.912 DEBUG 21140 --- [http-nio-8081-exec-9] c.m.b.myblog.dao.CovidMapper.getCovidWz  : ==> Parameters: 
+2021-06-18 19:11:02.913 DEBUG 21140 --- [http-nio-8081-exec-9] c.m.b.myblog.dao.CovidMapper.getCovidWz  : <==      Total: 7
+2021-06-18 20:56:43.651  WARN 21140 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m35s78ms20µs).
